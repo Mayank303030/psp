@@ -1,3 +1,3 @@
 <footer>
-  <p>&copy; 2023 My Story</p>
+  <p>&copy; <?php echo date('Y'); ?> My Story</p>
 </footer>
