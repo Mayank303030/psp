@@ -47,4 +47,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <?php if (!empty($errors)): ?>
         <div class="errors">
           <?php foreach ($errors as $error): ?>
-            <
+            <p><?php echo $error; ?></p>
+          <?php endforeach; ?>
+        </div>
+      <?php endif; ?>
+      <form method="POST" action="add_story.php">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required><br>
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" required><br>
+
+        <label for="category">Category:</label>
+        <select id="category" name="category" required>
+          <option value="">Select a category</option>
+          <option value="horror">Horror</option>
+          <option value="comedy">Comedy</option>
+          <option value="love">Love</option>
+        </select><br>
+
+        <label for="story">Story:</label>
+
